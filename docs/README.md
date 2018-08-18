@@ -2,5 +2,6 @@
 
 ### Links
 
-- [Environment setup](env-setup)
-- [Jupyter run](jupyter-run)
+- [Environment setup](env-setup.md)
+- [Jupyter run](jupyter-run.md)
+- [Data sets download](data-sets-download.md)
