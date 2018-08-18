@@ -1,6 +1,9 @@
 # Dataset files
 dataset/*.csv.bz2
 
+# Spark
+**/spark_warehouse
+**/*.parquet
 
 ### VirtualEnv ###
 # Virtualenv
