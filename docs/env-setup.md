@@ -2,33 +2,94 @@
 
 To completely setup environment for the first time:
 
-### 1. First time setup
+### 1. Install PySpark
 
-1. Install virtualenv
+Before installing PySpark, you must have Python and Spark installed.
 
-   `sudo apt-get install virtualenv`
+To install Spark, make sure you have [Java 8 or higher installed] on your computer. Then, visit the [Spark downloads page]. Select the latest Spark release, a prebuilt package for Hadoop, and download it directly.
 
-2. Create a new virtualenv
+To download the (current) latest version:
 
-   At the root of the repository:
-   `virtualenv venv`
+```bash
+$ cd ~/Downloads
 
-### 2. Install dependencies
+$ wget http://www-eu.apache.org/dist/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz
+```
 
-1. Activate virtualenv
+Unzip it and move it to your /opt folder:
 
-   `source venv/bin/activate`
+```bash
+$ tar -xzf spark-2.3.1-bin-hadoop2.7.tgz
 
-2. Install dependencies into activated virtualenv
+$ mv spark-2.3.1-bin-hadoop2.7 /opt/spark-2.3.1-bin-hadoop2.7
+```
 
-   _(venv) $_ `pip install -r requirements.txt`
+Create a symbolic link:
 
-## Usual virtualenv activation, deactivation
+```bash
+$ ln -s /opt/spark-2.3.1-bin-hadoop2.7 /opt/spark
+```
 
-- **Activate**
+This way, you will be able to download and use multiple Spark versions.
 
-   `source venv/bin/activate`
+Finally, tell your bash (or zsh, etc.) where to find Spark. To do so, configure your $PATH variables by adding the following lines in your ~/.bashrc (or ~/.zshrc) file:
 
-- **Deactivate**
+```
+export SPARK_HOME=/opt/spark
+export PATH=$SPARK_HOME/bin:$PATH
+```
 
-   _(venv) $_ `deactivate`
+Restart your shell to make the exports effective.
+
+### 2. Create virtual env
+
+Be sure to have [Python] 3 installed.
+
+Create a new virtual env. At the root of this repository:
+
+```bash
+$ python3 -m venv ./venv
+
+# Export spark home variables within virtual env
+$ echo 'export SPARK_HOME=/opt/spark
+export PATH=$SPARK_HOME/bin:$PATH' >> ./venv/bin/activate
+```
+
+### 3. Install dependencies
+
+Activate virtual env
+
+```bash
+$ source venv/bin/activate
+```
+
+Install dependencies into activated virtualenv
+
+```bash
+(venv) $ pip install --upgrade -r requirements.txt
+```
+
+# Usual operations
+
+- **Activate virtual env and launch Jupyter notebook**
+
+```bash
+$ source venv/bin/activate
+
+(venv) $ jupyter notebook
+```
+
+- **Deactivate virtual env**
+
+```bash
+(venv) $ deactivate
+```
+
+
+### Sources
+
+- <https://blog.sicara.com/get-started-pyspark-jupyter-guide-tutorial-ae2fe84f594f>
+
+[Python]: https://www.python.org
+[Java 8 or higher installed]: https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html
+[Spark downloads page]: http://spark.apache.org/downloads.html
