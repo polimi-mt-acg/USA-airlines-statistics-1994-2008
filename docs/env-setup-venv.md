@@ -1,4 +1,4 @@
-# Environment setup
+# Environment setup with Virtualenv
 
 To completely setup environment for the first time:
 
@@ -50,7 +50,7 @@ Create a new virtual env. At the root of this repository:
 ```bash
 $ python3 -m venv ./venv
 
-# Export spark home variables within virtual env
+# Export spark home variables into virtual env
 $ echo 'export SPARK_HOME=/opt/spark
 export PATH=$SPARK_HOME/bin:$PATH' >> ./venv/bin/activate
 ```
@@ -66,6 +66,9 @@ $ source venv/bin/activate
 Install dependencies into activated virtualenv
 
 ```bash
+# firstly upgrade pip
+(venv) $ pip install --upgrade pip
+
 (venv) $ pip install --upgrade -r requirements.txt
 ```
 
