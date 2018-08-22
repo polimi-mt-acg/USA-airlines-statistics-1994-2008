@@ -1,12 +1,12 @@
 # Data sets download
 
-Run the following lines to download the RITA airlines data sets from 1994 to 2008.
+Download the [RITA airlines dataset] from 1994 to 2008 to `./dataset`.
+
+To do it automatically:
 
 ```bash
 chmod +x ./script/get_data_sets.sh
 ./script/get_data_sets.sh
 ```
 
-Reference page at: [stat-computing.org]
-
-[stat-computing.org]: http://stat-computing.org/dataexpo/2009/the-data.html
+[RITA airlines dataset]: http://stat-computing.org/dataexpo/2009/the-data.html

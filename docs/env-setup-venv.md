@@ -1,12 +1,25 @@
 # Environment setup with Virtualenv
 
-To completely setup environment for the first time:
+Dependencies assumed to be already installed:
 
-### 1. Install PySpark
+- [Java], version 1.8 or higher
+- [Python], version 3.5 or higher
 
-Before installing PySpark, you must have Python and Spark installed.
 
-To install Spark, make sure you have [Java 8 or higher installed] on your computer. Then, visit the [Spark downloads page]. Select the latest Spark release, a prebuilt package for Hadoop, and download it directly.
+## Project setup
+
+To install dependencies and setup the project to be run:
+
+- [1. Install Spark](#1-install-spark)
+- [2. Install Python virtualenv](#2-install-python-virtualenv)
+- [3. Create virtualenv](#3-create-virtualenv)
+- [4. Install Python dependencies](#4-install-python-dependencies)
+- [5. Download the RITA airlines data sets](data-sets-download.md)
+
+
+### 1. Install Spark
+
+Download spark from the [Spark download page] by selecting the latest Spark release, the prebuilt package for Hadoop.
 
 To download the (current) latest version:
 
@@ -16,23 +29,18 @@ $ cd ~/Downloads
 $ wget http://www-eu.apache.org/dist/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz
 ```
 
-Unzip it and move it to your /opt folder:
+Unzip and install it:
 
 ```bash
 $ tar -xzf spark-2.3.1-bin-hadoop2.7.tgz
 
 $ mv spark-2.3.1-bin-hadoop2.7 /opt/spark-2.3.1-bin-hadoop2.7
-```
 
-Create a symbolic link:
-
-```bash
+# create a symbolic link
 $ ln -s /opt/spark-2.3.1-bin-hadoop2.7 /opt/spark
 ```
 
-This way, you will be able to download and use multiple Spark versions.
-
-Finally, tell your bash (or zsh, etc.) where to find Spark. To do so, configure your $PATH variables by adding the following lines in your ~/.bashrc (or ~/.zshrc) file:
+Add the following lines in your ~/.bashrc (or ~/.zshrc) file to export the path where to find Spark:
 
 ```
 export SPARK_HOME=/opt/spark
@@ -41,9 +49,14 @@ export PATH=$SPARK_HOME/bin:$PATH
 
 Restart your shell to make the exports effective.
 
-### 2. Create virtual env
 
-Be sure to have [Python] 3 installed.
+### 2. Install Python virtualenv
+
+```bash
+$ pip install virtualenv
+```
+
+### 3. Create virtualenv
 
 Create a new virtual env. At the root of this repository:
 
@@ -53,39 +66,29 @@ $ python3 -m venv ./venv
 # Export spark home variables into virtual env
 $ echo 'export SPARK_HOME=/opt/spark
 export PATH=$SPARK_HOME/bin:$PATH' >> ./venv/bin/activate
+
 ```
 
-### 3. Install dependencies
-
-Activate virtual env
+### 4. Install Python dependencies
 
 ```bash
+# activate virtual env
 $ source venv/bin/activate
-```
 
-Install dependencies into activated virtualenv
-
-```bash
-# firstly upgrade pip
+# first upgrade pip
 (venv) $ pip install --upgrade pip
 
 (venv) $ pip install --upgrade -r requirements.txt
 ```
 
-# Usual operations
+## Run
 
-- **Activate virtual env and launch Jupyter notebook**
+Activate virtualenv and run Jupiter Notebook.
 
 ```bash
 $ source venv/bin/activate
 
-(venv) $ jupyter notebook
-```
-
-- **Deactivate virtual env**
-
-```bash
-(venv) $ deactivate
+(venv) $ jupyter notebook .
 ```
 
 
@@ -93,6 +96,7 @@ $ source venv/bin/activate
 
 - <https://blog.sicara.com/get-started-pyspark-jupyter-guide-tutorial-ae2fe84f594f>
 
+
+[Java]: https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html
 [Python]: https://www.python.org
-[Java 8 or higher installed]: https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html
 [Spark downloads page]: http://spark.apache.org/downloads.html
