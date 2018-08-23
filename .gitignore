@@ -1,5 +1,5 @@
-# Dataset files
-dataset/*.csv.bz2
+# Dataset folder
+dataset
 
 # Spark
 **/spark_warehouse
