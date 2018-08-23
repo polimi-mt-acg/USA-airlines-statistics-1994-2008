@@ -8,13 +8,13 @@ Dependencies assumed to be already installed:
 
 ## Project setup
 
-To install dependencies and setup the project to be run:
+To install dependencies and setup the project
 
 - [1. Install Spark](#1-install-spark)
 - [2. Install Python virtualenv](#2-install-python-virtualenv)
 - [3. Create virtualenv](#3-create-virtualenv)
 - [4. Install Python dependencies](#4-install-python-dependencies)
-- [5. Download the RITA airlines data sets](data-sets-download.md)
+- [5. Download the RITA airlines dataset](#5-download-the-rita-airlines-dataset)
 
 
 ### 1. Install Spark
@@ -79,11 +79,19 @@ $ source venv/bin/activate
 (venv) $ pip install --upgrade pip
 
 (venv) $ pip install --upgrade -r requirements.txt
+
+# deactivate virtual env
+$ deactivate
 ```
+
+### 5. Download the RITA airlines dataset
+
+Please, look at the [download the RITA airlines dataset](dataset-download.md) guideline.
+
 
 ## Run
 
-Activate virtualenv and run Jupiter Notebook.
+Activate virtualenv and run Jupiter Notebook
 
 ```bash
 $ source venv/bin/activate

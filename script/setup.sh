@@ -5,7 +5,7 @@ set -e
 ROOT=`git rev-parse --show-toplevel`
 
 echo "==> Fetching dataset..."
-$ROOT/script/get_data_sets.sh
+$ROOT/script/get_dataset.sh
 
 echo "==> Creating conda environment..."
 conda env create -f environment.yml
