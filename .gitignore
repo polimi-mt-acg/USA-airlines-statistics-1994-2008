@@ -1,6 +1,9 @@
 # Dataset folder
 dataset
 
+# Python
+**/__pycache__
+
 # Spark
 **/spark_warehouse
 **/*.parquet
