@@ -20,6 +20,11 @@ Use charts to present the information that you have extracted from the data sets
 We address the problem exploiting [Spark] framework to manage the high volume of the available data. To display our analysis in an effective way, we make use of [Jupyter Notebooks], enabling us to show the flow of data transformations to extract our analytics, together with the data visualization.
 
 
+## Reports
+
+Checkout the [reports](reports) to look at the performed analytics.
+
+
 ## Documentation
 
 Checkout the [documentation](docs) to initialize and run this analytics.
