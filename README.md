@@ -1,4 +1,5 @@
 # USA-airlines-statistics-1994-2008
+*Big data analytics performed with Spark and Hadoop on RITA airlines dataset (1.3 GB)*
 
 ## Project assignment
 
@@ -32,7 +33,8 @@ Checkout the [documentation](docs) to initialize and run this analytics.
 ## Project context
 
 This project has been developed for the [Middleware Technologies for Distributed Systems course]
-(A.Y. 2017/2018) at [Politecnico di Milano].
+(A.Y. 2017/2018) at [Politecnico di Milano]. Look at the [polimi-mt-acg] page for other projects.
+
 
 [stat-computing.org]: http://stat-computing.org/dataexpo/2009/the-data.html
 [Hadoop]: http://hadoop.apache.org/
@@ -40,3 +42,5 @@ This project has been developed for the [Middleware Technologies for Distributed
 [Jupyter Notebooks]: https://jupyter.org
 [Middleware Technologies for Distributed Systems course]: https://www4.ceda.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?EVN_DETTAGLIO_RIGA_MANIFESTO=evento&aa=2017&k_cf=225&k_corso_la=481&k_indir=T2A&codDescr=090931&lang=EN&semestre=1&idGruppo=3589&idRiga=216904
 [Politecnico di Milano]: https://www.polimi.it
+[polimi-mt-acg]: https://github.com/polimi-mt-acg
+
