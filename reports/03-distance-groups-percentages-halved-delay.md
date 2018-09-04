@@ -8,20 +8,11 @@ So basically:
 
 - By the _Distance_ attribute we can infer the flight group:
 
-\begin{equation}
-FlightGroup = \left( Distance // 200 \right) + 1
-\end{equation}
+![png](images/03-distance-groups-percentages-halved-delay_00_01.png)
 
 - For each flight we can say if it has halved or not its delay:
 
-
-\begin{equation}
-    DelayHalved=
-    \begin{cases}
-      yes, & \text{if}\ \left(DepDealy \neq 0\right) \quad \textrm{and} \quad \left(ArrDelay <= \frac{DepDealy}{2} \right)\\
-      no, & \text{otherwise}
-    \end{cases}
-\end{equation}
+![png](images/03-distance-groups-percentages-halved-delay_00_02.png)
 
 
 - So, for each flight group we can create two sets of flight: those that have halved their delays and the others
