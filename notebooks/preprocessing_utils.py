@@ -27,7 +27,15 @@ def perform_dataset_preprocessing(spark, dataset_source=DATASET_SOURCE, dataset_
         sys.stdout.flush()
         
         # Read
-        df = spark.read.csv(dataset_source, inferSchema=True, header=True, sep=',').replace('NA', None)
+        df = spark.read.csv(dataset_source, inferSchema=True, header=True, sep=',')
+       
+        #Replacing Nulls
+        df = df.replace('NA', None, ['Year', 'Month', 'DayofMonth', 'DayOfWeek', 'DepTime', 'CRSDepTime', 'ArrTime', 'CRSArrTime',
+                                     'UniqueCarrier', 'FlightNum', 'TailNum', 'ActualElapsedTime', 'CRSElapsedTime', 'AirTime', 
+                                     'ArrDelay', 'DepDelay', 'Origin', 'Dest', 'Distance', 'TaxiIn', 'TaxiOut', 'Cancelled',
+                                     'CancellationCode', 'Diverted'] )
+        df = df.replace('NA', '0', ['CarrierDelay', 'WeatherDelay', 'NASDelay', 'SecurityDelay', 'LateAircraftDelay'])
+        
         read_time = datetime.now()
         print("*info*  Dataset read.")
         sys.stdout.flush()
@@ -36,6 +44,12 @@ def perform_dataset_preprocessing(spark, dataset_source=DATASET_SOURCE, dataset_
         df = df.withColumn('ArrDelay', df['ArrDelay'].cast(IntegerType()))
         df = df.withColumn('DepDelay', df['DepDelay'].cast(IntegerType()))
         df = df.withColumn('Distance', df['Distance'].cast(IntegerType()))
+        df = df.withColumn('CarrierDelay', df['CarrierDelay'].cast(IntegerType()))
+        df = df.withColumn('WeatherDelay', df['WeatherDelay'].cast(IntegerType()))
+        df = df.withColumn('NASDelay', df['NASDelay'].cast(IntegerType()))
+        df = df.withColumn('SecurityDelay', df['SecurityDelay'].cast(IntegerType()))
+        df = df.withColumn('LateAircraftDelay', df['LateAircraftDelay'].cast(IntegerType()))
+
         cast_time = datetime.now()
         print("*info*  Casts completed.")
         sys.stdout.flush()
