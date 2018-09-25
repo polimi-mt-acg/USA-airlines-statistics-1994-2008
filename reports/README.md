@@ -1,5 +1,7 @@
 # Reports
 
+**The below linked reports are a graphical synthesized version of python notebooks present in the [../notebooks](../notebooks) folder.**
+
 Analytics performed:
 
 1. The percentage of canceled flights per day, throughout the entire data set
@@ -14,8 +16,6 @@ Analytics performed:
 
 5. Also provide an additional data analysis defined by your group.
 
-The above linked reports are a graphical synthesized version of python notebooks present in the [../notebooks](../notebooks) folder.
-
 ---
 
-For further details about the analytics and the date, please refer to the [repository main page](../).
+For further details about the analytics and the date, please refer to the repository main page.
