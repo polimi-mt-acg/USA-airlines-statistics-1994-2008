@@ -29,6 +29,10 @@ Checkout the [reports](reports) to look at the performed analytics.
 
 Checkout the [documentation](docs) to initialize and run this analytics.
 
+## Project presentation
+
+[USA airlines statistics presentation - Arcari, Cilloni, Gregori]
+
 ## Project context
 
 This project has been developed for the [Middleware Technologies for Distributed Systems course]
@@ -40,3 +44,4 @@ This project has been developed for the [Middleware Technologies for Distributed
 [Jupyter Notebooks]: https://jupyter.org
 [Middleware Technologies for Distributed Systems course]: https://www4.ceda.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?EVN_DETTAGLIO_RIGA_MANIFESTO=evento&aa=2017&k_cf=225&k_corso_la=481&k_indir=T2A&codDescr=090931&lang=EN&semestre=1&idGruppo=3589&idRiga=216904
 [Politecnico di Milano]: https://www.polimi.it
+[USA airlines statistics presentation - Arcari, Cilloni, Gregori]: https://docs.google.com/presentation/d/1XKK-784P1bkwnZ8rq6e0xIo8rUV5pBWODOKvodT6o3A/edit?usp=sharing
