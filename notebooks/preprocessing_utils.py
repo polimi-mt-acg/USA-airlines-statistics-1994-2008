@@ -4,13 +4,13 @@ from pathlib import Path
 from pyspark.sql.types import IntegerType
 
 # default datasets paths
-DATASET_SOURCE='../dataset/*.csv.bz2'
-DATASET_TARGET='../dataset/preprocessed_dataset.parquet'
+DATASET_SOURCE = '../dataset/*.csv.bz2'
+DATASET_TARGET = '../dataset/preprocessed_dataset.parquet'
 
 # default DEV datasets paths
 year = 1994
-DATASET_SOURCE_DEV='../dataset/{}.csv.bz2'.format(year)
-DATASET_TARGET_DEV='../dataset/preprocessed_dataset_{}.parquet'.format(year)
+DATASET_SOURCE_DEV = '../dataset/{}.csv.bz2'.format(year)
+DATASET_TARGET_DEV = '../dataset/preprocessed_dataset_{}.parquet'.format(year)
 
 
 def perform_dataset_preprocessing(spark, dataset_source=DATASET_SOURCE, dataset_target=DATASET_TARGET):
@@ -25,36 +25,20 @@ def perform_dataset_preprocessing(spark, dataset_source=DATASET_SOURCE, dataset_
         start_time = datetime.now()
         print("*info*  Preprocessing started. Please wait..")
         sys.stdout.flush()
-        
+
         # Read
+        print("*info*  Start reading...")
         df = spark.read.csv(dataset_source, inferSchema=True, header=True, sep=',')
-       
-        #Replacing Nulls
-        df = df.replace('NA', None, ['Year', 'Month', 'DayofMonth', 'DayOfWeek', 'DepTime', 'CRSDepTime', 'ArrTime', 'CRSArrTime',
-                                     'UniqueCarrier', 'FlightNum', 'TailNum', 'ActualElapsedTime', 'CRSElapsedTime', 'AirTime', 
-                                     'ArrDelay', 'DepDelay', 'Origin', 'Dest', 'Distance', 'TaxiIn', 'TaxiOut', 'Cancelled',
-                                     'CancellationCode', 'Diverted'] )
-        df = df.replace('NA', '0', ['CarrierDelay', 'WeatherDelay', 'NASDelay', 'SecurityDelay', 'LateAircraftDelay'])
-        
+
+        # Replacing Nulls
+        df = df.replace('NA', None)
+
         read_time = datetime.now()
-        print("*info*  Dataset read.")
+        print("*info*  Read completed.")
         sys.stdout.flush()
 
-        # Casts
-        df = df.withColumn('ArrDelay', df['ArrDelay'].cast(IntegerType()))
-        df = df.withColumn('DepDelay', df['DepDelay'].cast(IntegerType()))
-        df = df.withColumn('Distance', df['Distance'].cast(IntegerType()))
-        df = df.withColumn('CarrierDelay', df['CarrierDelay'].cast(IntegerType()))
-        df = df.withColumn('WeatherDelay', df['WeatherDelay'].cast(IntegerType()))
-        df = df.withColumn('NASDelay', df['NASDelay'].cast(IntegerType()))
-        df = df.withColumn('SecurityDelay', df['SecurityDelay'].cast(IntegerType()))
-        df = df.withColumn('LateAircraftDelay', df['LateAircraftDelay'].cast(IntegerType()))
-
-        cast_time = datetime.now()
-        print("*info*  Casts completed.")
-        sys.stdout.flush()
-        
         # Write
+        print("*info*  Start writing...")
         df.write.save(dataset_target, format='parquet')
         write_time = datetime.now()
         print("*info*  Write completed.")
@@ -66,15 +50,13 @@ Preprocessing completed.
 
 Elapsed time:
     READ:   {}
-    CASTS:  {}
     WRITE:  {}
 
     TOTAL:  {}
 
-        """.format(read_time-start_time,
-                  cast_time-read_time,
-                  write_time-cast_time,
-                  end_time-start_time)
+""".format(read_time - start_time,
+           write_time - read_time,
+           end_time - start_time)
         print(out)
     else:
         print("Preprocessing NOT performed.\nPreprocessed dataset already exists: {}\n".format(dataset_target))
