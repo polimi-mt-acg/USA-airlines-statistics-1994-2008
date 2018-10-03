@@ -13,6 +13,8 @@ Using both [Hadoop] and [Spark] provide the following information:
 4. A weekly "penalty" score for each airport that depends on both the its incoming and outgoing flights. The score adds 0.5 for each incoming flight that is more than 15 minutes late, and 1 for each outgoing flight that is more than 15 minutes late.
 5. Also provide an additional data analysis defined by your group.
 
+	**Analysis chosen:** The yearly number of flights provided by the carriers for each route.
+
 Use charts to present the information that you have extracted from the data sets.
 
 

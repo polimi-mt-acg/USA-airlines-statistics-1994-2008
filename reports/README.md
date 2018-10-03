@@ -15,6 +15,8 @@ Analytics performed:
 	[04 Airport weekly penalty for arrivals and departures delays](04-penalty.md)
 
 5. Also provide an additional data analysis defined by your group.
+		
+	**Analysis chosen:** The yearly number of flights provided by the carriers for each route.
 
 ---
 
