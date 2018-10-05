@@ -1,3 +1,11 @@
+##### NOTICE
+
+> This reports has the goal to show **some of the results**. It was **not** possible to export **all the feasible combinations** of analytics performed because they were too many.
+>
+> Moreover, most of the parts of the notebook containing code have been omitted.
+>
+> Please, have a look at the notebook corresponding to this report ([notebooks](../notebooks) folder) and run it to perform any desired combination of the analytics.
+
 
 # Airport weekly penalty for arrivals and departures delays 
 
