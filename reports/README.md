@@ -18,7 +18,7 @@ Analytics performed:
 
 4. A weekly "penalty" score for each airport that depends on both the its incoming and outgoing flights. The score adds 0.5 for each incoming flight that is more than 15 minutes late, and 1 for each outgoing flight that is more than 15 minutes late.
 	
-	[04 Airport weekly penalty for arrivals and departures delays](04-penalty.md)
+	[04 Airport weekly penalty for arrivals and departures delays](04-weekly-airport-penalty.md)
 
 5. Also provide an additional data analysis defined by your group.
 		
