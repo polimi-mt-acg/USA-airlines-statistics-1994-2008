@@ -1,5 +1,5 @@
-# USA-airlines-statistics-1994-2008
-*Big data analytics performed with Spark and Hadoop on RITA airlines dataset (1.3 GB)*
+# USA airlines statistics 1994-2008
+*Big data analytics performed with Spark and Hadoop on RITA airlines dataset (8.3 GB)*
 
 ## Project assignment
 
