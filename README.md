@@ -1,4 +1,5 @@
 # USA-airlines-statistics-1994-2008
+*Big data analytics performed with Spark and Hadoop on RITA airlines dataset (1.3 GB)*
 
 ## Project assignment
 
@@ -11,6 +12,8 @@ Using both [Hadoop] and [Spark] provide the following information:
 3. The percentage of flights belonging to a given "distance group" that were able to halve their departure delays by the time they arrived at their destinations. Distance groups assort flights by their total distance in miles. Flights with distances that are less than 200 miles belong in group 1, flights with distances that are between 200 and 399 miles belong in group 2, flights with distances that are between 400 and 599 miles belong in group 3, and so on. The last group contains flights whose distances are between 2400 and 2599 miles.
 4. A weekly "penalty" score for each airport that depends on both the its incoming and outgoing flights. The score adds 0.5 for each incoming flight that is more than 15 minutes late, and 1 for each outgoing flight that is more than 15 minutes late.
 5. Also provide an additional data analysis defined by your group.
+
+	**Analysis chosen:** The yearly number of flights provided by the carriers for each route.
 
 Use charts to present the information that you have extracted from the data sets.
 
@@ -36,12 +39,14 @@ Checkout the [documentation](docs) to initialize and run this analytics.
 ## Project context
 
 This project has been developed for the [Middleware Technologies for Distributed Systems course]
-(A.Y. 2017/2018) at [Politecnico di Milano].
+(A.Y. 2017/2018) at [Politecnico di Milano]. Look at the [polimi-mt-acg] page for other projects.
+
 
 [stat-computing.org]: http://stat-computing.org/dataexpo/2009/the-data.html
 [Hadoop]: http://hadoop.apache.org/
 [Spark]: https://spark.apache.org/docs/2.3.1/index.html
 [Jupyter Notebooks]: https://jupyter.org
+[USA airlines statistics presentation - Arcari, Cilloni, Gregori]: https://docs.google.com/presentation/d/1XKK-784P1bkwnZ8rq6e0xIo8rUV5pBWODOKvodT6o3A
 [Middleware Technologies for Distributed Systems course]: https://www4.ceda.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?EVN_DETTAGLIO_RIGA_MANIFESTO=evento&aa=2017&k_cf=225&k_corso_la=481&k_indir=T2A&codDescr=090931&lang=EN&semestre=1&idGruppo=3589&idRiga=216904
 [Politecnico di Milano]: https://www.polimi.it
-[USA airlines statistics presentation - Arcari, Cilloni, Gregori]: https://docs.google.com/presentation/d/1XKK-784P1bkwnZ8rq6e0xIo8rUV5pBWODOKvodT6o3A/edit?usp=sharing
+[polimi-mt-acg]: https://github.com/polimi-mt-acg

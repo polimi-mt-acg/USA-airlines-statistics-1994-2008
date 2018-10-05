@@ -8,11 +8,11 @@ So basically:
 
 - By the _Distance_ attribute we can infer the flight group:
 
-![png](images/03-distance-groups-percentages-halved-delay_00_01.png)
+![png](images/03-distance-groups-percentages-halved-delay/00_01.png)
 
 - For each flight we can say if it has halved or not its delay:
 
-![png](images/03-distance-groups-percentages-halved-delay_00_02.png)
+![png](images/03-distance-groups-percentages-halved-delay/00_02.png)
 
 
 - So, for each flight group we can create two sets of flight: those that have halved their delays and the others
@@ -36,7 +36,7 @@ show_missing_pie_chart()
 ```
 
 
-![png](images/03-distance-groups-percentages-halved-delay_31_0.png)
+![png](images/03-distance-groups-percentages-halved-delay/31_0.png)
 
 
 ## Invalid group value
@@ -49,7 +49,7 @@ show_group_invalid_pie_chart()
 ```
 
 
-![png](images/03-distance-groups-percentages-halved-delay_33_0.png)
+![png](images/03-distance-groups-percentages-halved-delay/33_0.png)
 
 
 ### Summary of excluded data
@@ -61,7 +61,7 @@ The following chart show the summary of dropped rows
 show_dropped_summary_pie_chart()
 ```
 
-![png](images/03-distance-groups-percentages-halved-delay_35_0.png)
+![png](images/03-distance-groups-percentages-halved-delay/35_0.png)
 
 
 ## Percentages of flights belonging to a distance group that halved a delay
@@ -70,19 +70,19 @@ show_dropped_summary_pie_chart()
 
 The following chart show the percentage of halved delay per group
 
-![png](images/03-distance-groups-percentages-halved-delay_40_01.png)
-![png](images/03-distance-groups-percentages-halved-delay_40_02.png)
-![png](images/03-distance-groups-percentages-halved-delay_40_03.png)
-![png](images/03-distance-groups-percentages-halved-delay_40_04.png)
-![png](images/03-distance-groups-percentages-halved-delay_40_05.png)
-![png](images/03-distance-groups-percentages-halved-delay_40_06.png)
-![png](images/03-distance-groups-percentages-halved-delay_40_07.png)
-![png](images/03-distance-groups-percentages-halved-delay_40_08.png)
-![png](images/03-distance-groups-percentages-halved-delay_40_09.png)
-![png](images/03-distance-groups-percentages-halved-delay_40_10.png)
-![png](images/03-distance-groups-percentages-halved-delay_40_11.png)
-![png](images/03-distance-groups-percentages-halved-delay_40_12.png)
-![png](images/03-distance-groups-percentages-halved-delay_40_13.png)
+![png](images/03-distance-groups-percentages-halved-delay/40_01.png)
+![png](images/03-distance-groups-percentages-halved-delay/40_02.png)
+![png](images/03-distance-groups-percentages-halved-delay/40_03.png)
+![png](images/03-distance-groups-percentages-halved-delay/40_04.png)
+![png](images/03-distance-groups-percentages-halved-delay/40_05.png)
+![png](images/03-distance-groups-percentages-halved-delay/40_06.png)
+![png](images/03-distance-groups-percentages-halved-delay/40_07.png)
+![png](images/03-distance-groups-percentages-halved-delay/40_08.png)
+![png](images/03-distance-groups-percentages-halved-delay/40_09.png)
+![png](images/03-distance-groups-percentages-halved-delay/40_10.png)
+![png](images/03-distance-groups-percentages-halved-delay/40_11.png)
+![png](images/03-distance-groups-percentages-halved-delay/40_12.png)
+![png](images/03-distance-groups-percentages-halved-delay/40_13.png)
 
 
 ## Comparison of halved delay percentages
@@ -95,5 +95,5 @@ show_percetages_comparison_horizontal_stack_chart()
 ```
 
 
-![png](images/03-distance-groups-percentages-halved-delay_40_0.png)
+![png](images/03-distance-groups-percentages-halved-delay/40_0.png)
 
