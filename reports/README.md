@@ -5,6 +5,9 @@
 Analytics performed:
 
 1. The percentage of canceled flights per day, throughout the entire data set
+	
+	[01 Daily cancelled flights](01-daily-cancelled-flights.md)
+
 2. Weekly percentages of delays that are due to weather, throughout the entire data set
 3. The percentage of flights belonging to a given "distance group" that were able to halve their departure delays by the time they arrived at their destinations. Distance groups assort flights by their total distance in miles. Flights with distances that are less than 200 miles belong in group 1, flights with distances that are between 200 and 399 miles belong in group 2, flights with distances that are between 400 and 599 miles belong in group 3, and so on. The last group contains flights whose distances are between 2400 and 2599 miles.
 	
